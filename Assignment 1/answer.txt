@@ -1,0 +1,8 @@
+﻿404410030 資工二 鄭光宇
+Q1.	在Windows 10 上 安裝最新的 Linux Subsystem on Windows 10
+	然後下載toolchains，用 tar zxvf 解壓縮，
+	並且在.bashrc 最底下加入 "export PATH=toolchains所在資料夾:$PATH"(不含引號)，
+	以便之後使用。
+Q2.	hw1.o 與 hw1.exe 的差別為，hw1.o為目標檔，hw1.exe為最後可執行檔案，hw1.exe 還經過Link 的過程。
+Q3.	sample_O0.o 與 sample_O3.o 的大小差異， sample_O0.o(776) > sample_O3.o(692) ，
+	可能是因為 sample.c 內，變數sum 除了在for 以外都沒有其他操作，在sample_O3.s 裡面，可以看出有大量的code 被優化掉了，可能因此O3 小於O0。

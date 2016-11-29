@@ -27,9 +27,9 @@ main:
 STORELOOP:
     LDMIA r0!, {r4-r7}
     STMIA r3!, {r4-r7}
-    SUB r2, r2, #1
+    SUB r2, r2, #4
     CMP r2, #0
-    BNE STORELOOP
+    BGT STORELOOP
     LDR r0, .arrs
     ADD r3, r0, #40
 

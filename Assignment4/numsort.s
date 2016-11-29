@@ -18,8 +18,8 @@ PIVOTLOOP:
     LDR r8, [r1]
 
     INNERLOOP:
-        LDR r9, [r8, #-4]
-        STR r8, [r9]
+        LDR r9, [r1, #-4]
+        STR r9, [r1]
         SUB r1, r1, #4
         CMP r1, r6
         BEQ BREAKLOOP
@@ -28,7 +28,7 @@ PIVOTLOOP:
         BLT BREAKLOOP
         B INNERLOOP
     BREAKLOOP:
-    LDR r1, [r3]
+    STR r3, [r1]
     ADD r0, r0, #4
     CMP r0, r7
     BNE PIVOTLOOP

@@ -34,7 +34,7 @@ PIVOTLOOP:
     CMP r0, r7
     BNE PIVOTLOOP
     /*End Numsort*/
-
+    MOV r3, r6 @r3 points to result array
     nop
     LDMEA fp, {r0-r10, fp, sp, pc}
     .end

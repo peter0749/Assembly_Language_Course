@@ -1,18 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define MAXN 11
 
 int main(void){
-    int arr[10]={0,1,2,3,4,5,6,7,8,9};
+    int arr[MAXN];
     int i,j,u;
-    for(i=1; i<10; ++i){
+    srand(1);
+    for(i=0; i<MAXN; ++i) arr[i]=rand()%50;
+    for(i=1; i<MAXN; ++i){
         u = arr[i];
-        j = i;
-        while(j>0 && u>=arr[j]){
-            arr[j] = arr[j-1];
+        j = i-1;
+        while(j>=0 && u>arr[j]){
+            arr[j+1] = arr[j];
             --j;
         }
-        arr[j]=u;
+        arr[j+1]=u;
     }
-    for(i=0; i<10; ++i)printf("%d\n",arr[i]);
+    for(i=0; i<MAXN; ++i)printf("%d\n",arr[i]);
     return 0;
 }

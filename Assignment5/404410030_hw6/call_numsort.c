@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <time.h>
-#define MAXN 20
+#define MAXN 50
 extern int* NumSort(int, int*);
 
 int main(void){

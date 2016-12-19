@@ -1,0 +1,12 @@
+程式內容:
+讀取一個input.txt 檔案，將英文字母小寫轉大寫。
+
+編譯選項:
+arm-elf-gcc hw7.s -O0 -g -o hw7.exe
+
+如何編譯&執行:
+make
+會完成編譯 + 執行，將在同目錄下的input.txt內容轉大寫輸出至output.txt
+
+註記:
+請確保$PATH 環境變數有正確設定，使arm-elf- toolchain 可以正確執行。

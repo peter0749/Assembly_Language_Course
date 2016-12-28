@@ -2,7 +2,7 @@
  * Author:   Kuang-Yu Jeng
  * Date:     2016/12/29
  * Using:    C99 standard
- * flag:     -m3dnow -fopenmp -openmp
+ * flag:     -msse3 -fopenmp -openmp
  *
  ------*/
 #include <sys/time.h>
@@ -56,16 +56,12 @@ int main(int argc, char *argv[]) {
     gettimeofday(&sv, &sz);
     solv();
     gettimeofday(&ev, &ez);
-    fprintf(FileOut, "Time elapsed: %.3lfus\n", (ev.tv_sec-sv.tv_sec)*1.0e6f + (ev.tv_usec-sv.tv_usec));
     for(int i=0; i<NROW; ++i)
         fprintf(FileOut, "%.6f\n", mtxC[i]);
     fclose(FileIn);
     fclose(FileOut);
 #ifdef BENCH
-    FileOut = fopen("bench_parallel.txt","a");
-    if(!FileOut) exit(-3);
     printf("%.3lf\n", (ev.tv_sec-sv.tv_sec)*1.0e6f + (ev.tv_usec-sv.tv_usec));
-    fclose(FileOut);
 #endif
     return 0;
 }

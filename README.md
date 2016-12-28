@@ -5,3 +5,4 @@
 #####Assignment 4:Sorting
 #####Assignment 5:Call assembly function from C
 #####Assignment 6:Lower to upper
+#####Assignment 7:OMP+SIMD

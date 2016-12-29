@@ -51,7 +51,7 @@ int main(int argc, char *argv[]) {
     }
     for(int i=0; i<NROW; ++i)for(int j=CLIM; j<NCOL; ++j)
         mtxA[i][j] = mtxB[i][j] = 0;//Paddling
-    memset(mtxC, 0x00, sizeof(mtxC));
+    for(int i=0; i<NROW; ++i) mtxC[i]=0.0f;
     /*End of readimg File*/
     gettimeofday(&sv, &sz);
     solv();

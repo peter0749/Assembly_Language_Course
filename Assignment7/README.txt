@@ -19,7 +19,7 @@ OMP+SIMD版
 要注意的是若使用make bench，必須在同資料夾下放置data.txt 矩陣資料。
 
 編譯flag;
--msse3 -fopenmp -openmp  
+-std=gnu11 -msse3 -fopenmp -openmp  
 
 最佳紀錄:
 Serial:

@@ -1,0 +1,23 @@
+---
+title: "Benchmark"
+author: "Kuang-Yu Jeng"
+date: "2016/12/29"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Benchmark Chart
+```{r results='asis'}
+serial = read.table('serial.log', header=FALSE)
+index = c(1:nrow(serial))
+parallel = read.table('parallel.log', header=FALSE)
+parallel = data.frame(index, parallel)
+serial = data.frame(index, serial)
+plot(x=serial[,1], y=serial[,2], type='n', xlab='Thread Number', ylab='Time(us)', ylim=c(min(rbind(parallel[,2], serial[,2])),max(serial[,2])))
+lines(x=serial[,1], y=serial[,2], col='red')
+lines(x=parallel[,1], y=parallel[,2], col='green')
+title('OMP+SIMD(green) v.s. Normal(red)')
+```

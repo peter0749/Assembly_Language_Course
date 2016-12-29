@@ -15,17 +15,18 @@ OMP+SIMD版
 編譯方法;
 若以設定好環境，直接make 即可，
 而 make bench 可用來比較普通板 vs OMP+SIMD 程式執行效率，
-自己測試 OMP+SIMD 效率最多到普通版 4~5 倍左右。
+自己測試 OMP+SIMD 效率可以超過普通版 4~5 倍左右。
 要注意的是若使用make bench，必須在同資料夾下放置data.txt 矩陣資料。
 
 編譯flag;
 -std=gnu11 -msse3 -fopenmp -openmp  
 
-最佳紀錄:
+工作站上最佳紀錄:
 Serial:
-95450.000us
-OMP+SIMD(10 threads):
-22009.000us
+150688.000us
+OMP+SIMD(32 threads):
+17512.000us
+差8倍左右
 
 註記:
 似乎SSE在計算浮點數時會有一些誤差？因此若兩種版本輸出結果有些微差異應該也是正常的。

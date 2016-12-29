@@ -1,7 +1,7 @@
 #!/bin/bash
 PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin
 
-for i in {1..12}
+for i in {1..32}
 do
     echo "case: $i"
     t1=`./tmp1.bin data.txt`

@@ -1,6 +1,6 @@
 環境:
 OS: Ubuntu 16.04 LTS 64-bit, gcc-5.4.0
-CPU: Intel core-M 5y71
+CPU: Intel core M-5y71
 
 程式內容:
 讀入矩陣AB檔案，照題目意思算出矩陣C，並將結果存至output.txt。
